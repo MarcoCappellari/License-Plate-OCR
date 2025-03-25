@@ -1,0 +1,21 @@
+# Ambiente virtuale
+venv/
+.venv/
+env/
+.env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# VS Code
+.vscode/
+
+# Notebook
+.ipynb_checkpoints/
+
+# File di sistema
+.DS_Store
+Thumbs.db
