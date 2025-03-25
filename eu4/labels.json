@@ -1,0 +1,182 @@
+[
+  {
+    "image": "N41_JPEG.rf.64ba04ae8fb7f45cd84bcef6ab63d603.jpg",
+    "annotations": [
+      {
+        "label": "number_plate",
+        "coordinates": { "x": 325, "y": 358.5, "width": 156.5, "height": 39 }
+      }
+    ]
+  },
+  {
+    "image": "N50_JPEG.rf.3afee80f0551132d38646b237c782b43.jpg",
+    "annotations": [
+      {
+        "label": "number_plate",
+        "coordinates": { "x": 395, "y": 371, "width": 151.5, "height": 32 }
+      }
+    ]
+  },
+  {
+    "image": "N46_JPEG.rf.dadb5de8981295490e4c18e7f5bd718a.jpg",
+    "annotations": [
+      {
+        "label": "number_plate",
+        "coordinates": { "x": 403, "y": 276, "width": 211, "height": 53 }
+      }
+    ]
+  },
+  {
+    "image": "N81_JPEG.rf.e75f91de4ae814a642a221837ba144db.jpg",
+    "annotations": [
+      {
+        "label": "number_plate",
+        "coordinates": { "x": 371, "y": 308.5, "width": 216.5, "height": 48 }
+      }
+    ]
+  },
+  {
+    "image": "N9_JPEG.rf.4fc95a5684966b1bf538c2a3f7aa6cee.jpg",
+    "annotations": [
+      {
+        "label": "number_plate",
+        "coordinates": { "x": 224, "y": 340.5, "width": 164, "height": 32.5 }
+      }
+    ]
+  },
+  {
+    "image": "N96_JPEG.rf.b53796d92ec3822240a99e8e6cad4783.jpg",
+    "annotations": [
+      {
+        "label": "number_plate",
+        "coordinates": { "x": 341, "y": 386.5, "width": 232.5, "height": 42 }
+      }
+    ]
+  },
+  {
+    "image": "N77_JPEG.rf.5bb3bf61f9db3eecc7d59f1ad0ba2323.jpg",
+    "annotations": [
+      {
+        "label": "number_plate",
+        "coordinates": { "x": 324.5, "y": 361, "width": 316.5, "height": 75 }
+      }
+    ]
+  },
+  {
+    "image": "N4_JPEG.rf.5acc9c33881aa58d50fe64bfcc51d825.jpg",
+    "annotations": [
+      {
+        "label": "number_plate",
+        "coordinates": { "x": 252, "y": 373.5, "width": 164, "height": 26.5 }
+      }
+    ]
+  },
+  {
+    "image": "N79_JPEG.rf.fcfe36057bc722db7c7155081915fc9a.jpg",
+    "annotations": [
+      {
+        "label": "number_plate",
+        "coordinates": { "x": 362, "y": 307.5, "width": 201, "height": 55.5 }
+      }
+    ]
+  },
+  {
+    "image": "N86_JPEG.rf.9866d5041890b2a9210e27441e85d3aa.jpg",
+    "annotations": [
+      {
+        "label": "number_plate",
+        "coordinates": { "x": 224, "y": 269, "width": 169.5, "height": 47.5 }
+      }
+    ]
+  },
+  {
+    "image": "N47_JPEG.rf.adc583e9e65550e9933883233e85d2c0.jpg",
+    "annotations": [
+      {
+        "label": "number_plate",
+        "coordinates": { "x": 414.5, "y": 383.5, "width": 228, "height": 54 }
+      }
+    ]
+  },
+  {
+    "image": "N21_JPEG.rf.ba475a6bf12075da38081177793dab72.jpg",
+    "annotations": [
+      {
+        "label": "number_plate",
+        "coordinates": { "x": 422.5, "y": 406, "width": 238, "height": 76 }
+      }
+    ]
+  },
+  {
+    "image": "N93_JPEG.rf.60ff4816da554121e87c8844283cb476.jpg",
+    "annotations": [
+      {
+        "label": "number_plate",
+        "coordinates": { "x": 281, "y": 317.5, "width": 233.5, "height": 73.5 }
+      }
+    ]
+  },
+  {
+    "image": "N62_JPEG.rf.b101c318dfc2bf47ce977cada558d086.jpg",
+    "annotations": [
+      {
+        "label": "number_plate",
+        "coordinates": { "x": 294, "y": 341, "width": 335.5, "height": 63 }
+      }
+    ]
+  },
+  {
+    "image": "N63_JPEG.rf.d07183fc5a3533ea287b8716a54f27c3.jpg",
+    "annotations": [
+      {
+        "label": "number_plate",
+        "coordinates": { "x": 230.5, "y": 364.5, "width": 119.5, "height": 29 }
+      }
+    ]
+  },
+  {
+    "image": "N55_JPEG.rf.5eb54e23f5de2089bf35f457e9181ccc.jpg",
+    "annotations": [
+      {
+        "label": "number_plate",
+        "coordinates": { "x": 338.5, "y": 379.5, "width": 315, "height": 116 }
+      }
+    ]
+  },
+  {
+    "image": "N11_JPEG.rf.92bf84df16782627638bf9c85e3c37d0.jpg",
+    "annotations": [
+      {
+        "label": "number_plate",
+        "coordinates": { "x": 241.5, "y": 405.5, "width": 186, "height": 44.5 }
+      }
+    ]
+  },
+  {
+    "image": "N37_JPEG.rf.55c010c1602b408622e698a047da0f46.jpg",
+    "annotations": [
+      {
+        "label": "number_plate",
+        "coordinates": { "x": 386.5, "y": 395, "width": 115.5, "height": 25 }
+      }
+    ]
+  },
+  {
+    "image": "N5_JPEG.rf.f047ec8e1716ea242dcec806ac3feb0f.jpg",
+    "annotations": [
+      {
+        "label": "number_plate",
+        "coordinates": { "x": 279, "y": 369, "width": 192.5, "height": 41.5 }
+      }
+    ]
+  },
+  {
+    "image": "N84_JPEG.rf.51d21becb629a55f548c4f2e3186c06d.jpg",
+    "annotations": [
+      {
+        "label": "number_plate",
+        "coordinates": { "x": 290.5, "y": 320, "width": 159, "height": 32 }
+      }
+    ]
+  }
+]

@@ -1,0 +1,1772 @@
+[
+  {
+    "image": "8064615_null_f9993819-6748-483a-b0eb-d69205302121_34EOR776_FRONT_jpg.rf.0ea63273fe15b88f21626e6aff009ee3.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 295.957446,
+          "y": 330.63829799999996,
+          "width": 300.85106399999995,
+          "height": 35.46099399999997
+        }
+      }
+    ]
+  },
+  {
+    "image": "8065450_2229844_Bulunamadi_35BBK548_FRONT_jpg.rf.5975fa01f2feccc5394c08ade480045e.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 278.085106,
+          "y": 326.8085105,
+          "width": 198.723404,
+          "height": 23.262410999999986
+        }
+      }
+    ]
+  },
+  {
+    "image": "8067647_null_b15661d9-6f2f-4c42-b6ac-9bb039f14818_48ABS857_FRONT_jpg.rf.431de06d3eeaca6ae1555ac477b3a2b5.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 348.72340399999996,
+          "y": 317.73049649999996,
+          "width": 265.106384,
+          "height": 28.936169000000007
+        }
+      }
+    ]
+  },
+  {
+    "image": "8063786_null_f9643209-8b61-45c6-912d-60ac55b77ab6_34GES954_FRONT_jpg.rf.48c0a15028785e30185e4c9cb141c61c.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 317.659575,
+          "y": 382.9787235,
+          "width": 291.48936199999997,
+          "height": 35.17730500000005
+        }
+      }
+    ]
+  },
+  {
+    "image": "8065481_null_448fdfc5-ee60-4db5-b19e-5ff1c67c615d_48ACL690_FRONT_jpg.rf.6432026fd567453e7746ab4811be1eb3.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 302.55319199999997,
+          "y": 329.50354600000003,
+          "width": 275.74468,
+          "height": 31.48936199999997
+        }
+      }
+    ]
+  },
+  {
+    "image": "8054368_null_41de8eaa-33ab-4501-8998-9e414809610c_48TK038_FRONT_jpg.rf.ab7fe19171201e4c5334a2e7ed90631e.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 334.48455,
+          "y": 318.0323465,
+          "width": 320.667652,
+          "height": 39.35686900000002
+        }
+      }
+    ]
+  },
+  {
+    "image": "8055438_7268904_116f6437-42ee-4c21-8d08-615555bafa1f_48JK906_FRONT_jpg.rf.c1a872d1d242195ca4f7ca42d4260b3b.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 320.470051,
+          "y": 317.5077735,
+          "width": 258.624954,
+          "height": 32.887324999999976
+        }
+      }
+    ]
+  },
+  {
+    "image": "8069518_2230582_Bulunamadi_16JP054_FRONT_jpg.rf.6dd22bf92ffcb9679124c51509b029ae.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 294.07894699999997,
+          "y": 332.80701750000003,
+          "width": 262.368422,
+          "height": 26.315789000000052
+        }
+      }
+    ]
+  },
+  {
+    "image": "8054582_null_0f69192e-7cd5-4519-b971-31fac0cf71f1_48D0111_FRONT_jpg.rf.970923db1583c1374224e03a343ce018.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 322.318606,
+          "y": 404.7127425,
+          "width": 236.52444799999998,
+          "height": 24.04278899999997
+        }
+      }
+    ]
+  },
+  {
+    "image": "8056167_7270542_e40dc397-be5e-45c5-8c69-db895ec6737a_48ALM135_FRONT_jpg.rf.fb88f49fc927a77b82072886c5379772.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 323.5,
+          "y": 442.6666665,
+          "width": 244,
+          "height": 39.33333299999998
+        }
+      }
+    ]
+  },
+  {
+    "image": "8066136_7276860_81d33786-911b-4d23-909f-d4da31d67a94_48YB426_FRONT_jpg.rf.75b15b1762a612819b8f9b16a8ce7b10.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 339.148936,
+          "y": 310.49645399999997,
+          "width": 280.85106400000006,
+          "height": 32.62411400000002
+        }
+      }
+    ]
+  },
+  {
+    "image": "8055647_2227143_Bulunamadi_48E7934_FRONT_jpg.rf.e5302a9be9e389ffe7e5e0fab09cb388.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 224.82964600000003,
+          "y": 375.7371,
+          "width": 158.054628,
+          "height": 20.910585999999967
+        }
+      }
+    ]
+  },
+  {
+    "image": "8054278_2226850_Bulunamadi_35BZD25_FRONT_jpg.rf.fd7b7bff120c9ac21835bd6e306a1f29.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 327.85981200000003,
+          "y": 334.35031100000003,
+          "width": 318.790008,
+          "height": 35.460924000000034
+        }
+      }
+    ]
+  },
+  {
+    "image": "8069581_null_5888e64e-ce85-4faf-b6f9-426f58a105f5_48DH053_FRONT_jpg.rf.78f20fb9cdb09168727b130ebbe57945.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 238.297369,
+          "y": 336.9298245,
+          "width": 257.61578999999995,
+          "height": 31.05263100000002
+        }
+      }
+    ]
+  },
+  {
+    "image": "8051533_null_8e544242-37ed-496a-9922-32b79bdc0d0a_48ALL355_FRONT_jpg.rf.14a9addc0c3a6fc3466b884cf0f53c66.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 305.867384,
+          "y": 327.598032,
+          "width": 220.56533600000003,
+          "height": 24.280326000000002
+        }
+      }
+    ]
+  },
+  {
+    "image": "8054186_2227330_Bulunamadi_48AOA413_FRONT_jpg.rf.79e6c18dca0bd9e58ebd877968bc65b1.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 299.147451,
+          "y": 306.459152,
+          "width": 234.18068200000002,
+          "height": 27.349480000000028
+        }
+      }
+    ]
+  },
+  {
+    "image": "8052688_null_8c0ecf4d-84b8-4432-8302-b2c896e434a3_48UP444_FRONT_jpg.rf.14ccbb58c6f1205e0444e0a27cf33a75.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 342.055371,
+          "y": 322.7882145,
+          "width": 269.114098,
+          "height": 31.538084999999967
+        }
+      }
+    ]
+  },
+  {
+    "image": "8063429_null_c2116f2a-36a4-48b2-8400-53a7bc6e3af3_48APJ104_FRONT_jpg.rf.7634be8809bef9326a2a0d963355f078.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 282.76595699999996,
+          "y": 424.39716350000003,
+          "width": 235.31914999999998,
+          "height": 43.120566999999994
+        }
+      }
+    ]
+  },
+  {
+    "image": "8046127_2224759_Bulunamadi_48ABH859_FRONT_jpg.rf.1f67fed4fe24b829c9f053fefdad7811.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 230.35472800000002,
+          "y": 449.16426,
+          "width": 287.902472,
+          "height": 37.00690400000002
+        }
+      }
+    ]
+  },
+  {
+    "image": "8048294_2225448_Bulunamadi_34GHG339_FRONT_jpg.rf.34c108ba01a974efdc929b782ecd89bd.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 314.513927,
+          "y": 330.7939035,
+          "width": 321.925434,
+          "height": 40.79495899999995
+        }
+      }
+    ]
+  },
+  {
+    "image": "8053930_null_7e9e9841-6719-4dc1-902f-793660faa05d_48AOF314_FRONT_jpg.rf.64d641deb94496a84ec70bfa1b12db5e.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 384.416311,
+          "y": 387.471218,
+          "width": 208.93670199999997,
+          "height": 27.786137999999994
+        }
+      }
+    ]
+  },
+  {
+    "image": "8043913_null_8aef98d7-cc53-4e25-9328-8a2623929b86_34KCU346_FRONT_jpg.rf.2c15096fa188f54d468faba62a41ac95.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": { "x": 337, "y": 344.5, "width": 196, "height": 20 }
+      }
+    ]
+  },
+  {
+    "image": "8042797_null_48d21cde-34de-46c4-9061-4b790f70363c_48ANT110_FRONT_jpg.rf.585c97b8682f2133bf389fdec2612be5.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 325.718633,
+          "y": 314.09954949999997,
+          "width": 210.35682999999997,
+          "height": 21.932253000000003
+        }
+      }
+    ]
+  },
+  {
+    "image": "8038598_null_bc6a5b15-5cb1-405b-95f9-f28a308dcbdb_48ADN398_FRONT_jpg.rf.32c277cfc97a5c686550ff697c115788.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 335.690675,
+          "y": 332.062033,
+          "width": 220.425114,
+          "height": 27.68381599999998
+        }
+      }
+    ]
+  },
+  {
+    "image": "8052391_null_c051d983-78a2-43d9-8dfc-d27760beea02_48EY819_FRONT_jpg.rf.7218964a100870032eda18444c3701cb.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 266.940358,
+          "y": 435.61279,
+          "width": 204.711284,
+          "height": 33.64317399999999
+        }
+      }
+    ]
+  },
+  {
+    "image": "8066621_null_671d9fe7-03dc-41a6-9b30-f221e804e5e9_09TC701_FRONT_jpg.rf.9464e5250591f6b8c50e6eaddd39c7ea.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 264.46808500000003,
+          "y": 337.44680800000003,
+          "width": 258.297874,
+          "height": 26.382978000000037
+        }
+      }
+    ]
+  },
+  {
+    "image": "8045858_null_80bd0d5f-3feb-475c-a9d9-a1c07d8da330_48NH669_FRONT_jpg.rf.805198295b30409f364686a6c654e424.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 333.64410499999997,
+          "y": 322.1251575,
+          "width": 265.318562,
+          "height": 29.02580499999999
+        }
+      }
+    ]
+  },
+  {
+    "image": "8052773_null_9f6f4a7f-f13d-4888-9cd8-bdb6db7a34c2_34EEB932_FRONT_jpg.rf.8a5458ec61ccbe7e3392be9a61cb1e05.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 300.13120100000003,
+          "y": 463.94043450000004,
+          "width": 251.26086600000002,
+          "height": 28.683965
+        }
+      }
+    ]
+  },
+  {
+    "image": "8053781_7269113_95dda9e6-fed5-42bd-b0f8-8b533d4822c5_48AD870_FRONT_jpg.rf.6a528993bc6f08e19b6b7795f4d8bc4e.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 276.090851,
+          "y": 341.453484,
+          "width": 178.39981799999998,
+          "height": 20.926527999999962
+        }
+      }
+    ]
+  },
+  {
+    "image": "8053382_2226721_Bulunamadi_48AIY468_FRONT_jpg.rf.9a52ae92737f222c7c010227d6eba3d0.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 257.360962,
+          "y": 312.4839475,
+          "width": 221.01619599999998,
+          "height": 32.826729
+        }
+      }
+    ]
+  },
+  {
+    "image": "8063955_null_b3d41dae-4241-435c-8f32-4b98ca77bbe5_48EF006_FRONT_jpg.rf.95e322406840c6b16695eaa6272e209e.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 361.914894,
+          "y": 321.4184395,
+          "width": 244.680852,
+          "height": 32.907801000000006
+        }
+      }
+    ]
+  },
+  {
+    "image": "8052382_2226763_Bulunamadi_48ANT811_FRONT_jpg.rf.b515f6c021d9e7382fec03eccf47ae18.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 311.607978,
+          "y": 367.776746,
+          "width": 174.474108,
+          "height": 18.807530000000042
+        }
+      }
+    ]
+  },
+  {
+    "image": "8069329_7276903_c9c3874a-83f1-4fe0-945a-2ffa15ee57af_48ANR287_FRONT_jpg.rf.a0537e9b1fc820131b16ee0082d61715.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 247.166667,
+          "y": 341.888889,
+          "width": 240.33333399999998,
+          "height": 26
+        }
+      }
+    ]
+  },
+  {
+    "image": "8053143_null_8652c7ca-3e53-4b52-90ea-e5e0fffd8e6e_48DB441_FRONT_jpg.rf.ed728d9b1efcbbf2a94bdf6ba07cf380.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 349.804072,
+          "y": 439.1441845,
+          "width": 405.207844,
+          "height": 46.434207000000015
+        }
+      }
+    ]
+  },
+  {
+    "image": "8050000_null_a192b300-de6a-4e12-ab5f-f94fe1f90c32_07FKK71_FRONT_jpg.rf.c873937425c365841975c1cbf4ab82e6.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 388.46417399999996,
+          "y": 481.5060555,
+          "width": 290.215696,
+          "height": 33.738744999999994
+        }
+      }
+    ]
+  },
+  {
+    "image": "8065647_null_9edb304b-c780-4bfc-938e-382bb24613c7_35DCS72_FRONT_jpg.rf.cfe71daf4c07ee4de07f130b2788827d.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 362.553192,
+          "y": 318.29787250000004,
+          "width": 284.25532,
+          "height": 34.60992900000002
+        }
+      }
+    ]
+  },
+  {
+    "image": "8057345_null_b3df9f9f-bb0e-4685-9bd9-d10f8d38aefd_07BJS150_FRONT_jpg.rf.25aabd24fc4bcd285e1951dc6660bea7.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 265.652174,
+          "y": 372.6086955,
+          "width": 181.739132,
+          "height": 39.71014500000001
+        }
+      }
+    ]
+  },
+  {
+    "image": "8042475_null_1ab4d938-efb2-4b6d-8e68-1977c8bb266f_48AOM323_FRONT_jpg.rf.c7a94364713aa9129e41065f710fb20e.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 299.853712,
+          "y": 315.277727,
+          "width": 299.628032,
+          "height": 31.176424000000054
+        }
+      }
+    ]
+  },
+  {
+    "image": "8053459_2228684_Bulunamadi_09CEY21_FRONT_jpg.rf.cd9f7e340db4d911d8af98f37c6ef512.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 171.155371,
+          "y": 480.5399595,
+          "width": 300.051698,
+          "height": 34.228894999999966
+        }
+      }
+    ]
+  },
+  {
+    "image": "8060264_null_15866be6-1cbd-4978-85c9-d34f8f231854_48DA618_FRONT_jpg.rf.4ef65225956cc152b5e01dace62fb14d.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 294.333638,
+          "y": 446.240315,
+          "width": 334.333416,
+          "height": 36.68573200000003
+        }
+      }
+    ]
+  },
+  {
+    "image": "8069652_2230901_Bulunamadi_48EG798_FRONT_jpg.rf.d78a21efd0845eb4d5e2e77d37766187.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 243.684211,
+          "y": 395,
+          "width": 216.84210599999997,
+          "height": 33.50877000000003
+        }
+      }
+    ]
+  },
+  {
+    "image": "8059931_null_ebbd29a5-4b33-41c5-bc2f-37ee5c257242_48ANV185_FRONT_jpg.rf.0214f798c2f3e0048a536f1d85ad7934.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 333.17735500000003,
+          "y": 450.0938585,
+          "width": 294.56485000000004,
+          "height": 40.07685100000003
+        }
+      }
+    ]
+  },
+  {
+    "image": "8053981_null_b4c4434f-c58b-49f1-aabd-51db91db948e_48EZ540_FRONT_jpg.rf.f7b888f54d9e628f55707a18db3901bb.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 316.08169799999996,
+          "y": 339.3735705,
+          "width": 301.98782,
+          "height": 50.02084299999996
+        }
+      }
+    ]
+  },
+  {
+    "image": "8060404_null_ed15edc3-77d6-4e63-a120-d0724d54f255_48AOH009_FRONT_jpg.rf.6b260b61cec39c6d58536b6e99fb1c80.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 338.495244,
+          "y": 335.41241,
+          "width": 244.16050399999997,
+          "height": 26.512377999999956
+        }
+      }
+    ]
+  },
+  {
+    "image": "8063010_2229105_Bulunamadi_48AV060_FRONT_jpg.rf.c6752bf687edf2308003358ccfa3f590.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 301.34615399999996,
+          "y": 324.8717945,
+          "width": 310.384616,
+          "height": 37.94871699999999
+        }
+      }
+    ]
+  },
+  {
+    "image": "8057314_null_63017a13-ac15-4e23-a68d-2262ec848003_06CUB232_FRONT_jpg.rf.49d7efe70bcfffae275fea1c20c1bdcd.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 322.391304,
+          "y": 335.9420295,
+          "width": 307.391304,
+          "height": 30.72463700000003
+        }
+      }
+    ]
+  },
+  {
+    "image": "8063031_null_6ef4f1a5-02bc-43f6-984e-4966b58f7b15_03UC034_FRONT_jpg.rf.a79f8df49eb27705e8b080694792df62.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 255.961538,
+          "y": 348.71794850000003,
+          "width": 211.92307599999998,
+          "height": 37.43589700000001
+        }
+      }
+    ]
+  },
+  {
+    "image": "8069271_null_e56a3115-7b36-4184-ae81-4b552009c357_34DGM809_FRONT_jpg.rf.98b442a8fb76f434daa52d2446d6f4cd.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 328,
+          "y": 418.1111115,
+          "width": 326.66666799999996,
+          "height": 34.888889000000006
+        }
+      }
+    ]
+  },
+  {
+    "image": "8056569_null_ee80ca5d-d230-4611-a156-c6ab56638725_48SK386_FRONT_jpg.rf.367e959cd2611a3688e35e6200a2e713.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 281.956522,
+          "y": 326.811594,
+          "width": 296.086956,
+          "height": 26.376811999999973
+        }
+      }
+    ]
+  },
+  {
+    "image": "8061991_2229457_Bulunamadi_48BD352_FRONT_jpg.rf.97bc3d5e3b6a3e4305d174de29aabda2.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 487.891186,
+          "y": 435.175622,
+          "width": 247.11621200000002,
+          "height": 37.66312399999998
+        }
+      }
+    ]
+  },
+  {
+    "image": "8060932_2228769_Bulunamadi_09SF981_FRONT_jpg.rf.714772473f0fb75f1c0651fbb364f6c9.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 327.213115,
+          "y": 319.344262,
+          "width": 224.91803399999998,
+          "height": 26.22950800000001
+        }
+      }
+    ]
+  },
+  {
+    "image": "8058276_null_641679d3-591c-4568-9068-9bc2dda79740_48EA543_FRONT_jpg.rf.a9b97bf785920ff3d4c8db1a169c28b6.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 359.96783600000003,
+          "y": 336.152012,
+          "width": 249.383532,
+          "height": 35.19281000000001
+        }
+      }
+    ]
+  },
+  {
+    "image": "8066741_null_30e1e5ea-98fe-47b5-8cc2-448baf443fe6_48AJ873_FRONT_jpg.rf.d1502a859fa6c106424096f201375727.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 327.021276,
+          "y": 311.205674,
+          "width": 258.297872,
+          "height": 30.070921999999996
+        }
+      }
+    ]
+  },
+  {
+    "image": "8059777_null_be625fcb-e706-4493-aeb4-a055e7c0fa69_09ACC172_FRONT_jpg.rf.ba84971c7fd5937391f028120d5b5616.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 290.634236,
+          "y": 305.663056,
+          "width": 236.29927600000002,
+          "height": 29.90349600000002
+        }
+      }
+    ]
+  },
+  {
+    "image": "8059183_null_55e3b68e-0b71-4480-adb5-a3d5047b86db_34KFK585_FRONT_jpg.rf.aef78745b96c49bb05c6b9f87096a78d.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 284.160284,
+          "y": 352.0597165,
+          "width": 224.27621999999997,
+          "height": 26.512377000000015
+        }
+      }
+    ]
+  },
+  {
+    "image": "8059180_2228121_Bulunamadi_48V6919_FRONT_jpg.rf.aeb7e762815a704edcb90e8b14dee649.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 284.39149599999996,
+          "y": 318.7651025,
+          "width": 198.84283599999998,
+          "height": 24.046109
+        }
+      }
+    ]
+  },
+  {
+    "image": "8060227_null_93bf7082-4f39-49c3-8431-3d600d6ea07d_19UD175_FRONT_jpg.rf.c32e8e11e4f96a9d44c52ec668e2737b.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 329.940378,
+          "y": 443.1574815,
+          "width": 364.85348,
+          "height": 36.069165
+        }
+      }
+    ]
+  },
+  {
+    "image": "8051199_7258944_682cb8d1-8b5a-4ea5-9585-a2a8191abf6b_48CAT50_FRONT_jpg.rf.6377397149cb527a3463c15a8031864b.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 278.514761,
+          "y": 332.794459,
+          "width": 211.96313,
+          "height": 23.962943999999993
+        }
+      }
+    ]
+  },
+  {
+    "image": "8059921_null_79e4fe0e-c23b-4006-adbd-e56f7aa50758_48AV274_FRONT_jpg.rf.9112cc0c5a60c8edae74eb71211df7ee.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 352.136788,
+          "y": 325.2390555,
+          "width": 289.015748,
+          "height": 37.61058300000002
+        }
+      }
+    ]
+  },
+  {
+    "image": "8065715_null_69a48834-54e4-4363-b1d3-db3e2e7f16f6_48APZ485_FRONT_jpg.rf.dd414a0c112239593bc7d27a97956571.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 297.021277,
+          "y": 439.43262400000003,
+          "width": 325.957446,
+          "height": 35.17730399999999
+        }
+      }
+    ]
+  },
+  {
+    "image": "8068764_null_adf11693-577e-4cd2-88ea-ca1573b29732_48ED896_FRONT_jpg.rf.e01f445bd88014a9eda80a15c93279d5.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 284.166667,
+          "y": 325.444444,
+          "width": 231.666666,
+          "height": 30
+        }
+      }
+    ]
+  },
+  {
+    "image": "8060518_2228797_Bulunamadi_48AFB639_FRONT_jpg.rf.e09525e2c7bbb09424ad5f6ccdc207fa.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 355.604977,
+          "y": 428.51401599999997,
+          "width": 277.45511799999997,
+          "height": 39.46028199999995
+        }
+      }
+    ]
+  },
+  {
+    "image": "8060785_2228773_Bulunamadi_35BLL541_FRONT_jpg.rf.c271f7a189b2392878e9ff48e88400c6.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 318.379749,
+          "y": 317.37782649999997,
+          "width": 329.709166,
+          "height": 45.31766899999997
+        }
+      }
+    ]
+  },
+  {
+    "image": "8059138_null_2512011e-de15-43a9-a24e-230f257c7493_48DU600_FRONT_jpg.rf.a3481ef57cea3899394ebc7b9f4db55a.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 190.519181,
+          "y": 449.47729200000003,
+          "width": 312.599434,
+          "height": 36.377448000000015
+        }
+      }
+    ]
+  },
+  {
+    "image": "8051853_null_2cf9e6de-9dec-473e-b15c-5725520ab62f_48AJA231_FRONT_jpg.rf.c651d2e248c2f90f05649359bf4e189e.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 306.16613900000004,
+          "y": 333.482533,
+          "width": 238.559054,
+          "height": 25.66906799999998
+        }
+      }
+    ]
+  },
+  {
+    "image": "8060153_2228665_Bulunamadi_16AST940_FRONT_jpg.rf.d8f4d7b7d49e4349b59a4aeef35bd7eb.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 258.495685,
+          "y": 370.5567245,
+          "width": 180.345826,
+          "height": 28.978646999999967
+        }
+      }
+    ]
+  },
+  {
+    "image": "8052478_null_c619bd04-9293-4d96-a48e-042fb3db2e29_06CHM920_FRONT_jpg.rf.3ad11e1cc9c475bc68fdecb96d90affd.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 290.324,
+          "y": 306.6666665,
+          "width": 188.4,
+          "height": 22.933333000000005
+        }
+      }
+    ]
+  },
+  {
+    "image": "8060974_2228543_Bulunamadi_35S2870_FRONT_jpg.rf.d91e6e046e72dc51e0eea0fa255f295f.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 322.436444,
+          "y": 316.65801350000004,
+          "width": 236.91566799999998,
+          "height": 25.810324999999978
+        }
+      }
+    ]
+  },
+  {
+    "image": "8029844_null_fb36cc3c-d2cf-41be-b271-eda7fa0f38b5_20FP689_FRONT_jpg.rf.1a241257e2a754316b1a1ad8d65b3f92.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": { "x": 349, "y": 312, "width": 268, "height": 25.5 }
+      }
+    ]
+  },
+  {
+    "image": "8032477_null_33e0d041-b046-411a-8522-b06ece14980c_48APN276_FRONT_jpg.rf.217527d6e4c242f1a660bd637505cde8.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 283.415546,
+          "y": 334.752648,
+          "width": 272.774952,
+          "height": 30.106569999999977
+        }
+      }
+    ]
+  },
+  {
+    "image": "8054384_null_a869a483-ea88-4946-9d5a-7f510c48b78a_48NC050_FRONT_jpg.rf.68b092e66f73219721a8a7a9c7f3039d.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 289.015255,
+          "y": 324.04972399999997,
+          "width": 373.017442,
+          "height": 45.29692200000005
+        }
+      }
+    ]
+  },
+  {
+    "image": "8023311_7237257_521a1312-b3da-4515-9160-a826823286f0_48K6062_FRONT_jpg.rf.af48eeeb86bc5c139e70efce299ccc00.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": { "x": 274, "y": 305.5, "width": 192, "height": 25.5 }
+      }
+    ]
+  },
+  {
+    "image": "8026335_2219913_Bulunamadi_48EE874_FRONT_jpg.rf.543f74362e5e5e38e130ac34e4cab952.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": { "x": 264, "y": 384, "width": 204, "height": 28 }
+      }
+    ]
+  },
+  {
+    "image": "8036897_2222460_Bulunamadi_48AL076_FRONT_jpg.rf.13e4f724bfc64e6395e23491479a3c8b.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": { "x": 315, "y": 324.5, "width": 212, "height": 22.5 }
+      }
+    ]
+  },
+  {
+    "image": "8051128_null_e9dd4803-3707-497b-8463-c4249cae606d_48AGP708_FRONT_jpg.rf.548491fd0c591070f1b055e1ca929f9c.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 348.385876,
+          "y": 352.30914,
+          "width": 322.49233200000003,
+          "height": 34.00162399999999
+        }
+      }
+    ]
+  },
+  {
+    "image": "8032458_null_5828c622-7245-4b3c-b697-9e8ada83efc4_48DD013_FRONT_jpg.rf.43f3a4008d7e4f6b7dc76372912afeaf.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 356.356447,
+          "y": 319.716763,
+          "width": 296.96984199999997,
+          "height": 33.507720000000006
+        }
+      }
+    ]
+  },
+  {
+    "image": "8077392_null_cc1785f0-316e-4101-8732-3d4f377bdf58_48ND149_FRONT_jpg.rf.13a62e8250f91c865d71140895009c9a.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 259.483584,
+          "y": 387.3415745,
+          "width": 383.333488,
+          "height": 62.846811
+        }
+      }
+    ]
+  },
+  {
+    "image": "8037408_7250415_258f8640-5b78-4522-9846-ddba277576a0_48BD352_FRONT_jpg.rf.6512725da6783147b178ad5acd8b0bbf.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 258.63676899999996,
+          "y": 315.33998699999995,
+          "width": 218.481922,
+          "height": 27.100660000000005
+        }
+      }
+    ]
+  },
+  {
+    "image": "8056779_null_1f370628-8582-4395-b840-51da93623679_48V2266_FRONT_jpg.rf.314086d2ecd78db2f9746c91f79fb995.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 333.695652,
+          "y": 330.8695645,
+          "width": 215.21739200000002,
+          "height": 22.898550999999998
+        }
+      }
+    ]
+  },
+  {
+    "image": "8051826_null_d0fdd8ed-a8ea-4803-868c-affa5f710a71_09AFU798_FRONT_jpg.rf.899bc4a052111a0cd79302adee0e1868.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 302.457423,
+          "y": 414.98995249999996,
+          "width": 304.051682,
+          "height": 34.50515300000001
+        }
+      }
+    ]
+  },
+  {
+    "image": "8028268_null_b1921ba4-24bd-46d6-a4e4-f78192975994_48KU818_FRONT_jpg.rf.c6fd6e309414d3ca12b787142e6f3a53.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": { "x": 329, "y": 306, "width": 244, "height": 28 }
+      }
+    ]
+  },
+  {
+    "image": "8024906_7237272_a9f4e3f6-57ef-4a5d-9652-b1b6c89e35cb_48SA488_FRONT_jpg.rf.dc1ef0555c5b708d9a360c7b751ebf90.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": { "x": 396, "y": 352, "width": 228, "height": 29.5 }
+      }
+    ]
+  },
+  {
+    "image": "8076955_2232592_Bulunamadi_48AOK269_FRONT_jpg.rf.40af0e867ab62046417ac5b5b82a65c1.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 303.97335499999997,
+          "y": 323.853469,
+          "width": 270.305422,
+          "height": 38.47764000000001
+        }
+      }
+    ]
+  },
+  {
+    "image": "8028409_null_5b542df8-3783-4714-9c3a-f5bc7b662e4f_48NK543_FRONT_jpg.rf.447122d96dceadb86d245d0265fd3d90.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": { "x": 312, "y": 336, "width": 226, "height": 26.5 }
+      }
+    ]
+  },
+  {
+    "image": "8075784_null_efc7efe9-f46b-41a9-881a-0765d9f9f9fd_48ES276_FRONT_jpg.rf.ec500b3d21feb9f7486e0d99bb9489a1.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 318.88344,
+          "y": 338.6032305,
+          "width": 235.67554399999997,
+          "height": 25.010467000000006
+        }
+      }
+    ]
+  },
+  {
+    "image": "8076048_null_b53ec9d7-68c7-4a64-be71-15848acae81f_48EJ842_FRONT_jpg.rf.4a8aef4d71a31347e8b5917da63d4922.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 312.871309,
+          "y": 319.043763,
+          "width": 239.04233799999997,
+          "height": 26.934348
+        }
+      }
+    ]
+  },
+  {
+    "image": "8076965_null_e7f433db-bf22-413b-b191-9e860d521fae_34GDY212_FRONT_jpg.rf.8a007717641e8fc6fd0e0d5f16b4ae88.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 278.481919,
+          "y": 413.6346285,
+          "width": 291.468122,
+          "height": 35.912463
+        }
+      }
+    ]
+  },
+  {
+    "image": "8031953_7240671_afab9aca-839d-4aaa-b8a3-f9419233c48a_48AG176_FRONT_jpg.rf.377b83c49dc924b090eb5f9bba9c733e.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 346.209884,
+          "y": 331.0197355,
+          "width": 275.792032,
+          "height": 38.11495099999996
+        }
+      }
+    ]
+  },
+  {
+    "image": "8077446_null_08be71ce-f3dc-4027-baec-d55c32031d29_48ANT303_FRONT_jpg.rf.9c001270f2111e5c7a6d24b863c7d838.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 371.790195,
+          "y": 454.837768,
+          "width": 317.44052999999997,
+          "height": 42.00475799999998
+        }
+      }
+    ]
+  },
+  {
+    "image": "8073997_null_6a0abb6c-350f-4a87-9090-570583800ec6_48AOK515_FRONT_jpg.rf.e809312040d4537f9e4515fb744922de.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 336.679349,
+          "y": 465.90008950000004,
+          "width": 355.91817,
+          "height": 55.79257899999999
+        }
+      }
+    ]
+  },
+  {
+    "image": "8076065_2232435_Bulunamadi_48Y1348_FRONT_jpg.rf.486db4a9f5d665938347d6941e8fea04.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 341.008083,
+          "y": 352.872022,
+          "width": 291.468122,
+          "height": 30.46146600000003
+        }
+      }
+    ]
+  },
+  {
+    "image": "8075465_null_a6194b41-698d-4398-af35-03924dc3cbde_48ADR793_FRONT_jpg.rf.7851c4c27200e251709e0b09aba3cee6.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 476.401279,
+          "y": 465.41911849999997,
+          "width": 304.4543259999999,
+          "height": 34.95052300000003
+        }
+      }
+    ]
+  },
+  {
+    "image": "8073872_null_d254b7f8-dbd8-448e-af70-6121be5aed60_34HVV134_FRONT_jpg.rf.f89dbf473b1507b2b3ae982dc50bd24e.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 250.104659,
+          "y": 361.68981499999995,
+          "width": 240.48525,
+          "height": 29.499524000000008
+        }
+      }
+    ]
+  },
+  {
+    "image": "8047723_2225089_Bulunamadi_48MA4146_FRONT_jpg.rf.3f0434bf21976fa06f72a7a21e0eb7cd.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 309.01545,
+          "y": 425.73966900000005,
+          "width": 225.59389199999998,
+          "height": 42.696932000000004
+        }
+      }
+    ]
+  },
+  {
+    "image": "8025778_7237278_6b7644db-880e-4f36-8f29-a669ff409d16_48KV597_FRONT_jpg.rf.23539e68bc6e2c0e0447375c9fce8623.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": { "x": 294, "y": 324.5, "width": 226, "height": 26.5 }
+      }
+    ]
+  },
+  {
+    "image": "8076160_null_ea82fdb1-3001-428f-ba5a-0ed3606a4d0a_48AAC805_FRONT_jpg.rf.f6dd83ca7f810235b85c748d874648fd.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 170.263556,
+          "y": 419.4062745,
+          "width": 312.63082399999996,
+          "height": 51.944812999999954
+        }
+      }
+    ]
+  },
+  {
+    "image": "8050619_null_65ee3f1a-1a59-4220-b11b-aa4945c1a284_35ACF756_FRONT_jpg.rf.4fbc980153f99ca10f1f749907ce6a56.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 233.144049,
+          "y": 436.2464095,
+          "width": 185.38546600000004,
+          "height": 36.460852999999986
+        }
+      }
+    ]
+  },
+  {
+    "image": "8077874_null_822b1525-ef3c-4ec8-9d35-d2deced5d633_48UF543_FRONT_jpg.rf.aecf681bd06278dae2cb8058ecd4e2e8.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 151.986678,
+          "y": 466.220737,
+          "width": 303.973356,
+          "height": 50.020932000000016
+        }
+      }
+    ]
+  },
+  {
+    "image": "8049627_2225773_Bulunamadi_48BV577_FRONT_jpg.rf.420e72d7c89e40d076c20d9c4cce8972.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 284.3,
+          "y": 329.2,
+          "width": 260.6,
+          "height": 30.13333399999999
+        }
+      }
+    ]
+  },
+  {
+    "image": "8050020_7258657_2e76c3d8-c8ea-458c-ae3a-044b0365f4b0_48SB650_FRONT_jpg.rf.05abac8cfcca10e2169be48976ce6d6e.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 303.220782,
+          "y": 463.5766435,
+          "width": 276.38354000000004,
+          "height": 31.33236899999997
+        }
+      }
+    ]
+  },
+  {
+    "image": "8069714_7276959_07cc4520-0d2e-4cb1-b6e5-c46da420df5f_48AIC744_FRONT_jpg.rf.131b2777e12cb5ec552f898493a2611b.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 267.368421,
+          "y": 408.947368,
+          "width": 229.473686,
+          "height": 34.03508800000003
+        }
+      }
+    ]
+  },
+  {
+    "image": "8047744_2225182_Bulunamadi_48BE656_FRONT_jpg.rf.786ba124dd687c3144b684679e4a8dd6.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 321.488109,
+          "y": 336.274068,
+          "width": 262.20678599999997,
+          "height": 27.396794
+        }
+      }
+    ]
+  },
+  {
+    "image": "8050146_null_7de12145-42e4-4eb0-bc10-8bda152b485e_48AC579_FRONT_jpg.rf.8ec59864f942feb8b9654c5236c7839c.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 141.79999999999998,
+          "y": 426.73333349999996,
+          "width": 168.79999999999998,
+          "height": 35.33333299999998
+        }
+      }
+    ]
+  },
+  {
+    "image": "8045793_null_13fd7f7b-6a1b-44ac-ac09-f68e8cc70021_48AND216_FRONT_jpg.rf.d3df21aab66670b0cc33242ff2923a67.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 327.904257,
+          "y": 350.84625100000005,
+          "width": 157.03908199999998,
+          "height": 18.067071999999996
+        }
+      }
+    ]
+  },
+  {
+    "image": "8035393_null_ee1723f2-23c1-49b1-97d1-474c8d89c7f1_16LD888_FRONT_jpg.rf.575c3130ec747601dc12df7865d35e3e.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 327.157471,
+          "y": 337.485044,
+          "width": 230.032738,
+          "height": 23.65891399999998
+        }
+      }
+    ]
+  },
+  {
+    "image": "8069785_2230910_Bulunamadi_48Y1757_FRONT_jpg.rf.ce1bdf1f1dfa743c066f92762f03d36c.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 304.605264,
+          "y": 316.4035085,
+          "width": 224.99999999999997,
+          "height": 24.736841000000027
+        }
+      }
+    ]
+  },
+  {
+    "image": "8070064_2230867_Bulunamadi_06DYZ262_FRONT_jpg.rf.7efc99b078d697350d2f1aa3e0f23b2e.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 321.272727,
+          "y": 446.909091,
+          "width": 329.09091,
+          "height": 40.484848
+        }
+      }
+    ]
+  },
+  {
+    "image": "8071424_null_9130f0e5-3516-4277-a109-f419e80dcfe7_07AUC660_FRONT_jpg.rf.77c5c06bb51ba5bf594d69700da2eb25.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 324,
+          "y": 366.30303,
+          "width": 232.727272,
+          "height": 31.030302000000006
+        }
+      }
+    ]
+  },
+  {
+    "image": "8071003_null_76b1039d-b9df-4aed-8908-dde9a88028b4_48VB335_FRONT_jpg.rf.d4a4bd99b60def31d8784a0126a41dd1.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 340.72727299999997,
+          "y": 377.212121,
+          "width": 265.454546,
+          "height": 28.121211999999957
+        }
+      }
+    ]
+  },
+  {
+    "image": "8038439_2223133_Bulunamadi_48AT867_FRONT_jpg.rf.47725e94bd2aefd209209b7825239250.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 304.899814,
+          "y": 331.049372,
+          "width": 242.16654000000003,
+          "height": 30.526512000000025
+        }
+      }
+    ]
+  },
+  {
+    "image": "8069959_2230869_Bulunamadi_16LD888_FRONT_jpg.rf.36786cc0e6a588c0eb958372199a32db.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 322.363637,
+          "y": 414.18181849999996,
+          "width": 418.54545399999995,
+          "height": 53.57575700000001
+        }
+      }
+    ]
+  },
+  {
+    "image": "8062380_null_f2f4ca2e-5f03-4357-b618-d54e423a5abc_48ALU688_FRONT_jpg.rf.524f5009da7036f89147a971f24f247a.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 283.57142899999997,
+          "y": 303.3333335,
+          "width": 195.714286,
+          "height": 22.539683000000025
+        }
+      }
+    ]
+  },
+  {
+    "image": "8048860_2225889_Bulunamadi_48ABF92_FRONT_jpg.rf.67c27b1de97358c48d8adbfa73e314c9.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 349.561436,
+          "y": 310.274604,
+          "width": 269.343208,
+          "height": 33.865858
+        }
+      }
+    ]
+  },
+  {
+    "image": "8035317_null_3dee3c99-4b4e-449c-844f-b570280ebb66_48EJ278_FRONT_jpg.rf.6ccbd795c500da7b726606270fddca00.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 332.10058399999997,
+          "y": 328.1304045,
+          "width": 196.92236799999998,
+          "height": 22.65788699999996
+        }
+      }
+    ]
+  },
+  {
+    "image": "8073211_7282752_101249cf-ff36-4e0d-bd5c-4659f59e7175_48EK031_FRONT_jpg.rf.84c6acd5b76ac5f6e4907310cf06e6cf.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 308.061605,
+          "y": 431.270214,
+          "width": 239.04233799999997,
+          "height": 29.499524000000008
+        }
+      }
+    ]
+  },
+  {
+    "image": "8061476_null_a6ba3f24-f6c3-4c9e-9c21-4a48b6ea1340_48DH520_FRONT_jpg.rf.0523e65357128e0e6a2e384c63392c6b.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 281.72294999999997,
+          "y": 313.7056685,
+          "width": 233.41618,
+          "height": 25.195817000000034
+        }
+      }
+    ]
+  },
+  {
+    "image": "8072393_null_5cb94db4-55da-4cb1-bbb3-1965da918e3a_34DNU976_FRONT_jpg.rf.a0f96a9068d35f332921a4f850f71d20.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 177.659574,
+          "y": 463.9716315,
+          "width": 318.723404,
+          "height": 41.70212700000002
+        }
+      }
+    ]
+  },
+  {
+    "image": "8078378_2232970_Bulunamadi_48NZ838_FRONT_jpg.rf.b84bc627e7a03288d7f327431ceddb2d.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 331.148188,
+          "y": 438.48477149999997,
+          "width": 327.54090799999994,
+          "height": 38.156993
+        }
+      }
+    ]
+  },
+  {
+    "image": "8072268_null_5fb52c64-da70-4ea4-a4dc-9601cc67a553_48AF305_FRONT_jpg.rf.b0c6637ceb1d6235a59e974bdf8d0bd2.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 409.42307700000003,
+          "y": 416.794872,
+          "width": 301.92307800000003,
+          "height": 40.25640999999996
+        }
+      }
+    ]
+  },
+  {
+    "image": "8037636_null_36b7aa1c-131f-4f7b-a8bf-6ca85dc944e4_34BT4686_FRONT_jpg.rf.136614026e658c5a64b092dc4f6e6c9f.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": { "x": 289, "y": 349.5, "width": 190, "height": 24 }
+      }
+    ]
+  },
+  {
+    "image": "8073820_null_71f77986-e14d-4b94-a0b7-45a9befef81e_34HVV134_FRONT_jpg.rf.b4bcc7fc94cbcf39343f0a5b97eaef71.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 304.45432600000004,
+          "y": 420.0475685,
+          "width": 262.609892,
+          "height": 30.782110999999986
+        }
+      }
+    ]
+  },
+  {
+    "image": "8073551_2231764_Bulunamadi_20AIH438_FRONT_jpg.rf.bf7672628beb09d5efef2bc580bbcfa4.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 359.525447,
+          "y": 417.001422,
+          "width": 266.938626,
+          "height": 33.02664200000004
+        }
+      }
+    ]
+  },
+  {
+    "image": "8071883_null_5e676d39-2f48-46fa-ab13-abb78220e00e_35AOM088_FRONT_jpg.rf.19599628c8238d16634f9f8e5b92a5f9.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 222.909091,
+          "y": 415.3939395,
+          "width": 256.72727399999997,
+          "height": 48.72727299999997
+        }
+      }
+    ]
+  },
+  {
+    "image": "8078144_null_e8dc35d7-5c5b-497e-9fac-8b03c80b155d_48UC662_FRONT_jpg.rf.91812bbaf02d7d72d4f96f8d431a9476.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 294.11346000000003,
+          "y": 410.9091295,
+          "width": 306.37820800000003,
+          "height": 34.950522999999976
+        }
+      }
+    ]
+  },
+  {
+    "image": "8071921_null_b3724245-e5b8-4116-bf1c-56c675de94b1_48ADL818_FRONT_jpg.rf.8b802be1441fe35ffbd812e0c205f57b.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 312,
+          "y": 400,
+          "width": 371.63636399999996,
+          "height": 43.63636199999996
+        }
+      }
+    ]
+  },
+  {
+    "image": "8073388_7282759_7f644690-a646-4c57-9f63-ae522c28997e_48AV030_FRONT_jpg.rf.50951863cc0cd53d83525cc49c13b8c7.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 270.545905,
+          "y": 338.603231,
+          "width": 328.50284999999997,
+          "height": 35.912464
+        }
+      }
+    ]
+  },
+  {
+    "image": "8071875_null_809f68e3-27de-4399-9f77-595cd960121d_34HOV906_FRONT_jpg.rf.40681a4ee58968e205d051626d6b055e.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 406.545454,
+          "y": 441.45454500000005,
+          "width": 359.27272800000003,
+          "height": 47.515152
+        }
+      }
+    ]
+  },
+  {
+    "image": "8073274_null_d6a5945d-4d9e-477a-b952-bef629791359_48AL581_FRONT_jpg.rf.f1491497b647b60174e2ed4eb95a3fe0.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 277.519977,
+          "y": 401.9310125,
+          "width": 252.99048200000001,
+          "height": 31.102758999999992
+        }
+      }
+    ]
+  },
+  {
+    "image": "8061251_2228705_Bulunamadi_07BJS150_FRONT_jpg.rf.901be9fd264479739266240fd16e84ff.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 274.270666,
+          "y": 379.977765,
+          "width": 235.545404,
+          "height": 26.43786399999999
+        }
+      }
+    ]
+  },
+  {
+    "image": "8062738_null_6d98d0b2-1372-4419-88fd-c128ac9fa417_48ET538_FRONT_jpg.rf.2c87c5426d5907ae2d772511c7e2853b.jpg",
+    "annotations": [
+      {
+        "label": "0",
+        "coordinates": {
+          "x": 232.142857,
+          "y": 342.063492,
+          "width": 198.57142999999996,
+          "height": 38.41269799999998
+        }
+      }
+    ]
+  }
+]
