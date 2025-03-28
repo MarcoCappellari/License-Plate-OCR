@@ -14,7 +14,7 @@ import cv2
 import json
 import re
 from difflib import SequenceMatcher
-
+import matplotlib.pyplot as plt
 # 1) Disabilita i log di onnxruntime e open_image_models
 import warnings
 warnings.filterwarnings("ignore")  # Ignora eventuali Python warnings
@@ -275,61 +275,58 @@ TRANSFORMATIONS_WITH_LEVELS = [
 # --- FUNZIONE PRINCIPALE --- #
 ########################################################################
 
+...
+# === FUNZIONE PRINCIPALE === #
+# main_transformations.py (versione completa e aggiornata con output e grafici unificati)
+
+# --- tutto il codice sopra rimane invariato fino alla funzione main() ---
+
 def main():
-    # 1) Carichiamo le mappe di ground truth
     all_gt = load_ground_truths()
-
-    # 2) Inizializziamo l'OCR
     alpr = ALPR()
-
-    # Variabili globali per statistiche totali (tutte le cartelle, trasformazioni e livelli)
     global_total = 0
     global_correct = 0
     global_matched_chars = 0
     global_total_chars = 0
+    os.makedirs("grafici", exist_ok=True)
 
-    # 3) Iteriamo su ogni cartella (eu, eu2, eu3, ...)
+    combined_stats = {}
+
+    print("\n=== INIZIO ELABORAZIONE ===")
+
     for folder_name, gt_map in all_gt.items():
         if not os.path.isdir(folder_name):
             continue
 
-        # Lista di immagini .jpg
-        image_files = [f for f in os.listdir(folder_name) if f.lower().endswith(".jpg")]
-        image_files.sort()
-
+        image_files = sorted([f for f in os.listdir(folder_name) if f.lower().endswith(".jpg")])
         print(f"\n=== PROCESSING FOLDER: {folder_name} ===")
 
-        # 4) Per ogni trasformazione con livelli
         for transf in TRANSFORMATIONS_WITH_LEVELS:
             transf_name = transf["name"]
             levels = transf["levels"]
             apply_func = transf["apply_func"]
-
-            # Creiamo una cartella di output (es: "output_wave") dentro la cartella "folder_name"
             transf_output_dir = os.path.join(folder_name, f"output_{transf_name}")
             os.makedirs(transf_output_dir, exist_ok=True)
 
-            # Statistiche su TUTTI i livelli di questa trasformazione
+            if transf_name not in combined_stats:
+                combined_stats[transf_name] = {lvl: {"imgs": 0, "correct": 0, "matched": 0, "chars": 0} for lvl in levels}
+
             transf_tot = 0
             transf_correct = 0
             transf_matched = 0
             transf_chars = 0
 
-            # 5) Cicliamo i livelli di aggressività
             for lvl in levels:
-                # Es. lvl=0.3 => perc_int=30 => "level_30"
                 perc_int = int(lvl * 100)
                 level_folder_name = f"level_{perc_int}"
                 level_output_dir = os.path.join(transf_output_dir, level_folder_name)
                 os.makedirs(level_output_dir, exist_ok=True)
 
-                # Statistiche per questo specifico livello
                 level_tot = 0
                 level_correct = 0
                 level_matched = 0
                 level_chars = 0
 
-                # 6) Elaboriamo ogni immagine
                 for img_file in image_files:
                     true_plate = gt_map.get(img_file)
                     if not true_plate:
@@ -340,71 +337,75 @@ def main():
                     if img is None:
                         continue
 
-                    # Applica la trasformazione con intensità lvl
                     transformed_img = apply_func(img, lvl)
-
-                    # Salva l'immagine modificata
-                    # Nome file: "<original>_<transfName>_<percInt>.jpg"
                     out_filename = f"{os.path.splitext(img_file)[0]}_{transf_name}_{perc_int}.jpg"
                     out_path = os.path.join(level_output_dir, out_filename)
                     cv2.imwrite(out_path, transformed_img)
 
-                    # OCR
                     ocr_plate = run_ocr(alpr, out_path)
-
-                    # Confronto
-                    level_tot += 1
-                    if ocr_plate == true_plate:
-                        level_correct += 1
-
                     matched, tot_chars = sequence_match_score(ocr_plate, true_plate)
+
+                    level_tot += 1
+                    level_correct += (ocr_plate == true_plate)
                     level_matched += matched
                     level_chars += tot_chars
 
-                # Fine loop immagini per un livello
                 transf_tot += level_tot
                 transf_correct += level_correct
                 transf_matched += level_matched
                 transf_chars += level_chars
 
-                # Aggiorniamo le globali
+                combined_stats[transf_name][lvl]["imgs"] += level_tot
+                combined_stats[transf_name][lvl]["correct"] += level_correct
+                combined_stats[transf_name][lvl]["matched"] += level_matched
+                combined_stats[transf_name][lvl]["chars"] += level_chars
+
                 global_total += level_tot
                 global_correct += level_correct
                 global_matched_chars += level_matched
                 global_total_chars += level_chars
 
-                # Stampiamo i risultati di questo livello
                 if level_tot > 0:
                     pct_correct = (level_correct / level_tot) * 100
                     pct_chars = (level_matched / level_chars) * 100
-                    print(f"  [{transf_name}] lvl={perc_int}% | "
-                          f"Imgs: {level_tot} | Perfette: {level_correct} ({pct_correct:.2f}%) "
-                          f"| Chars: {pct_chars:.2f}%")
                 else:
-                    print(f"  [{transf_name}] lvl={perc_int}% | Nessuna immagine elaborata.")
+                    pct_correct = 0.0
+                    pct_chars = 0.0
 
-            # Fine loop su tutti i "levels" di questa trasformazione
+                print(f"  [{transf_name}] lvl={perc_int}% | Imgs: {level_tot} | Perfette: {level_correct} ({pct_correct:.2f}%) | Chars: {pct_chars:.2f}%")
 
-            # Statistiche totali per questa trasformazione (somma di tutti i livelli)
             if transf_tot > 0:
                 total_pct_correct = (transf_correct / transf_tot) * 100
                 total_pct_chars = (transf_matched / transf_chars) * 100
-                print(f" => [{transf_name}] TOT (tutti i livelli) | "
-                      f"Imgs: {transf_tot} | Perfette: {transf_correct} ({total_pct_correct:.2f}%) "
-                      f"| Chars: {total_pct_chars:.2f}%")
+                print(f" => [{transf_name}] TOT (tutti i livelli) | Imgs: {transf_tot} | Perfette: {transf_correct} ({total_pct_correct:.2f}%) | Chars: {total_pct_chars:.2f}%")
             else:
                 print(f" => [{transf_name}] Nessuna immagine processata in totale.")
 
-    # 7) Statistiche globali finali su tutte le cartelle e trasformazioni
     print("\n=== RISULTATI FINALI SU TUTTE LE CARTELLE E TRASFORMAZIONI ===")
     if global_total > 0:
-        global_perc_correct = (global_correct / global_total) * 100
-        global_char_acc = (global_matched_chars / global_total_chars) * 100
         print(f"Immagini totali elaborate: {global_total}")
-        print(f"Targhe perfettamente corrette: {global_correct} ({global_perc_correct:.2f}%)")
-        print(f"Accuratezza carattere per carattere: {global_char_acc:.2f}%")
+        print(f"Targhe perfettamente corrette: {global_correct} ({(global_correct / global_total) * 100:.2f}%)")
+        print(f"Accuratezza carattere per carattere: {(global_matched_chars / global_total_chars) * 100:.2f}%")
     else:
         print("Nessuna immagine processata.")
+
+    # === GRAFICI UNITI PER OGNI TRASFORMAZIONE ===
+    for transf_name, stats in combined_stats.items():
+        levels = sorted(stats.keys())
+        x = [int(lvl * 100) for lvl in levels]
+        perfect = [(stats[lvl]["correct"] / stats[lvl]["imgs"] * 100) if stats[lvl]["imgs"] > 0 else 0 for lvl in levels]
+        chars = [(stats[lvl]["matched"] / stats[lvl]["chars"] * 100) if stats[lvl]["chars"] > 0 else 0 for lvl in levels]
+
+        plt.figure()
+        plt.plot(x, perfect, label="Perf. plates (%)")
+        plt.plot(x, chars, label="Char. accuracy (%)")
+        plt.xlabel("Livello di aggressività (%)")
+        plt.ylabel("Accuracy (%)")
+        plt.title(f"{transf_name} - TUTTI I DATASET")
+        plt.legend()
+        plt.grid()
+        plt.savefig(f"grafici/{transf_name}_combined.png")
+        plt.close()
 
 if __name__ == "__main__":
     main()
