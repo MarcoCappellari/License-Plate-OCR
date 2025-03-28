@@ -2,9 +2,10 @@
 main_transformations.py
 Esegue:
 1) Lettura ground truth (eu, eu2, eu3).
-2) Applicazione di trasformazioni su ciascuna immagine (creazione di 20 cartelle).
-3) OCR sulle immagini modificate.
-4) Confronto e statistiche.
+2) Applicazione di trasformazioni su ciascuna immagine (ognuna con vari "livelli" di aggressività).
+3) Salvataggio delle immagini modificate in sottocartelle.
+4) OCR sulle immagini modificate.
+5) Confronto e statistiche finali.
 """
 
 import os
@@ -13,28 +14,26 @@ import cv2
 import json
 import re
 from difflib import SequenceMatcher
-from collections import defaultdict
 
 # 1) Disabilita i log di onnxruntime e open_image_models
 import warnings
 warnings.filterwarnings("ignore")  # Ignora eventuali Python warnings
 
 import logging
-# Imposta i messaggi di open_image_models (o l'intero "open_image_models" se preferisci) a livello ERROR
+# Imposta i messaggi di open_image_models (o l'intero "open_image_models") a livello ERROR
 logging.getLogger("open_image_models").setLevel(logging.ERROR)
 logging.getLogger("open_image_models.detection.core.yolo_v9.inference").disabled = True
-
 
 # 2) Imposta su CPU e alza il livello di severità di ONNXRuntime
 os.environ["ORT_DISABLE_ALL_EXCEPT_CPU"] = "1"
 import onnxruntime as ort
-ort.set_default_logger_severity(4)  # 4 = Fatal, quindi nasconde Warning/Error di livello minore
+ort.set_default_logger_severity(4)  # 4 = Fatal, nasconde Warning/Error di livello minore
 
 from fast_alpr import ALPR
 
-# Importiamo le trasformazioni
+# Import delle trasformazioni
 from transformazioni.geometric import (
-    skew_image, stretch_image, perspective_transform, wave_effect, elastic_distortion
+    skew_image, wave_effect, elastic_distortion, stretch_image, perspective_transform
 )
 from transformazioni.color import (
     invert_colors, reduce_contrast, extreme_saturation, custom_rgb_filter, gradient_overlay
@@ -49,15 +48,14 @@ from transformazioni.effects import (
     gaussian_blur, motion_blur, ghosting_effect, artificial_shadows, glitch_effect
 )
 
-
 ########################################################################
 # --- FUNZIONI DI SUPPORTO PER LA GROUND TRUTH --- #
 ########################################################################
 
 def parse_ground_truth_txt(txt_path):
     """
-    Legge la ground truth da un file .txt in formato:  ...    <plate>
-    Ritorna la targa come stringa
+    Legge la ground truth da un file .txt in formato ... <plate>.
+    Ritorna la targa (maiuscola).
     """
     try:
         with open(txt_path, 'r', encoding='utf-8') as f:
@@ -71,7 +69,7 @@ def parse_ground_truth_txt(txt_path):
 
 def parse_ground_truth_json(json_path):
     """
-    Legge un file JSON di label, ad es. in eu2/ e eu3/.
+    Legge un file JSON di label, ad es. in eu2/ o eu3/.
     Ritorna un dict { "filename.jpg": "PLATE" }
     """
     gt_dict = {}
@@ -80,6 +78,7 @@ def parse_ground_truth_json(json_path):
             data = json.load(f)
             for entry in data:
                 image = entry["image"]
+                # Esempio: "48AGR391_FRONT.jpg" => targa "48AGR391"
                 match = re.search(r'_([A-Z0-9]{5,})_FRONT', image)
                 if match:
                     plate = match.group(1).upper()
@@ -93,28 +92,27 @@ def load_ground_truths():
     Carica le mappe di ground truth per 'eu', 'eu2', 'eu3', etc.
     Ritorna un dizionario del tipo:
     {
-       "eu": { "1.jpg": "ABC123", "2.jpg": "..." },
-       "eu2": { "48AGR391_FRONT.jpg": "48AGR391", ... },
-       "eu3": ...
+      "eu":  { "1.jpg": "ABC123", "2.jpg": "..." },
+      "eu2": { "48AGR391_FRONT.jpg": "48AGR391", ... },
+      "eu3": ...
     }
     """
     all_folders = {
         "eu": {},
         "eu2": parse_ground_truth_json("eu2/labels.json"),
         "eu3": parse_ground_truth_json("eu3/labels.json"),
-        # se vuoi anche eu4, eu5:
-        # "eu4": parse_ground_truth_json("eu4/labels.json"),
-        # "eu5": parse_ground_truth_json("eu5/labels.json"),
+        # Aggiungi qui se hai altre cartelle (eu4, eu5, ecc.)
     }
 
-    # Per 'eu', leggiamo i .txt
-    for f in os.listdir("eu"):
-        if f.lower().endswith(".txt"):
-            image_file = f.replace(".txt", ".jpg")
-            full_path = os.path.join("eu", f)
-            plate = parse_ground_truth_txt(full_path)
-            if plate:
-                all_folders["eu"][image_file] = plate
+    # Per 'eu', leggiamo i .txt (se la cartella esiste)
+    if os.path.isdir("eu"):
+        for f in os.listdir("eu"):
+            if f.lower().endswith(".txt"):
+                image_file = f.replace(".txt", ".jpg")
+                full_path = os.path.join("eu", f)
+                plate = parse_ground_truth_txt(full_path)
+                if plate:
+                    all_folders["eu"][image_file] = plate
 
     return all_folders
 
@@ -124,16 +122,17 @@ def load_ground_truths():
 
 def sequence_match_score(predicted, actual):
     """
-    Ritorna numero di caratteri coincidenti e numero totale di caratteri (per calcolo accuracy).
+    Ritorna (matched_chars, total_chars)
+    per calcolare l'accuracy carattere per carattere.
     """
     sm = SequenceMatcher(None, predicted, actual)
-    matched_chars = sum(block.size for block in sm.get_matching_blocks())
-    total_chars = max(len(predicted), len(actual))
-    return matched_chars, total_chars
+    matched = sum(block.size for block in sm.get_matching_blocks())
+    total = max(len(predicted), len(actual))
+    return matched, total
 
 def run_ocr(alpr, image_path):
     """
-    Esegue OCR con fast_alpr e ritorna il testo riconosciuto (maiuscolo).
+    Esegue OCR con fast_alpr e ritorna il testo riconosciuto (in maiuscolo).
     """
     try:
         results = alpr.predict(image_path)
@@ -144,32 +143,133 @@ def run_ocr(alpr, image_path):
     return ocr_plate
 
 ########################################################################
-# --- LISTA DELLE TRASFORMAZIONI DA APPLICARE --- #
+# --- TRASFORMAZIONI CON LIVELLI DI AGGRESSIVITA' --- #
 ########################################################################
 
-TRANSFORMATIONS = [
-    ("skew", lambda img: skew_image(img, skew_factor=0.3)),
-    ("stretch", lambda img: stretch_image(img, x_stretch=1.2, y_stretch=1.0)),
-    ("perspective", lambda img: perspective_transform(img)),
-    ("wave", lambda img: wave_effect(img, amplitude=10, frequency=40)),
-    ("elastic", lambda img: elastic_distortion(img, alpha=34, sigma=6)),
-    ("invert", lambda img: invert_colors(img)),
-    ("reduce_contrast", lambda img: reduce_contrast(img, factor=0.5)),
-    ("extreme_saturation", lambda img: extreme_saturation(img, saturation_scale=2.0)),
-    ("custom_rgb", lambda img: custom_rgb_filter(img, r_factor=1.5, g_factor=0.8, b_factor=1.0)),
-    ("gradient_overlay", lambda img: gradient_overlay(img)),
-    ("gaussian_noise", lambda img: gaussian_noise(img, mean=0, var=20)),
-    ("salt_and_pepper", lambda img: salt_and_pepper(img, amount=0.02)),
-    ("perlin_noise", lambda img: perlin_noise(img, scale=50)),
-    ("jpeg_artifacts", lambda img: jpeg_artifacts(img, quality=30)),
-    ("irregular_spacing", lambda img: irregular_spacing(img, max_shift=3)),
-    ("char_overlap", lambda img: character_overlap(img, overlap_prob=0.8)),
-    ("small_decorations", lambda img: small_decorations(img, color=(0, 0, 255), thickness=1, num_lines=3)),
-    ("shape_modif", lambda img: shape_modification(img, intensity=0.6)),
-    ("gaussian_blur", lambda img: gaussian_blur(img, ksize=5)),
-    ("motion_blur", lambda img: motion_blur(img, kernel_size=15)),
-    # Aggiungi altre se vuoi (ghosting_effect, artificial_shadows, glitch_effect, ecc.)
+"""
+Di seguito un elenco di trasformazioni, ognuna con:
+ - "name"        : nome della trasformazione (es. "wave")
+ - "levels"      : lista di aggressività in [0..1] (es. [0.1, 0.3, 0.5, 0.7, 0.9, 1.0])
+ - "apply_func"  : funzione(img, level) -> immagine trasformata
+   (decidi tu come interpretare 'level' nella trasformazione)
+"""
+
+########################################################################
+# --- TRASFORMAZIONI CON LIVELLI DI AGGRESSIVITA' --- #
+########################################################################
+
+TRANSFORMATIONS_WITH_LEVELS = [
+    {
+        "name": "skew",
+        "levels": [0.1, 0.3, 0.5, 0.7, 0.9, 1.0],
+        # Esempio: fattore skew = lvl
+        "apply_func": lambda img, lvl: skew_image(img, skew_factor=lvl)
+    },
+    {
+        "name": "stretch",
+        "levels": [0.1, 0.3, 0.5, 0.7, 1.0],
+        # x_stretch = 1 + lvl
+        "apply_func": lambda img, lvl: stretch_image(img, x_stretch=(1.0 + lvl), y_stretch=1.0)
+    },
+    {
+        "name": "perspective",
+        "levels": [0.2, 0.5, 1.0],
+        # Non c'è un param di perspective transform. Creiamo "fake" intensità e la applichiamo in base a lvl
+        "apply_func": lambda img, lvl: perspective_transform(img)  # ignora lvl o usalo in un perspective custom
+    },
+    {
+        "name": "wave",
+        "levels": [0.1, 0.3, 0.5, 0.7, 0.9, 1.0],
+        "apply_func": lambda img, lvl: wave_effect(img, amplitude=int(10 * lvl), frequency=40)
+    },
+    {
+        "name": "elastic",
+        "levels": [0.1, 0.3, 0.5, 0.7, 0.9, 1.0],
+        "apply_func": lambda img, lvl: elastic_distortion(img, alpha=int(34 * lvl), sigma=6)
+    },
+    {
+        "name": "invert",
+        "levels": [1.0],  # un solo "livello" (non param.)
+        "apply_func": lambda img, lvl: invert_colors(img)
+    },
+    {
+        "name": "reduce_contrast",
+        "levels": [0.3, 0.5, 0.7, 1.0, 1.2],
+        # factor < 1 = riduce, >1 = aumenta
+        "apply_func": lambda img, lvl: reduce_contrast(img, factor=lvl)
+    },
+    {
+        "name": "extreme_saturation",
+        "levels": [0.5, 1.0, 1.5, 2.0, 2.5],
+        # interpretare lvl come "saturation_scale"
+        "apply_func": lambda img, lvl: extreme_saturation(img, saturation_scale=lvl)
+    },
+    {
+        "name": "custom_rgb",
+        "levels": [0.5, 1.0, 1.5],
+        # ad es. r_factor = 1 + lvl, g_factor=1-lvl, ...
+        "apply_func": lambda img, lvl: custom_rgb_filter(img, r_factor=1+lvl, g_factor=1-lvl, b_factor=1.0)
+    },
+    {
+        "name": "gradient_overlay",
+        "levels": [1.0],  # singolo livello (non param.)
+        "apply_func": lambda img, lvl: gradient_overlay(img)
+    },
+    {
+        "name": "gaussian_noise",
+        "levels": [0.1, 0.3, 0.5, 0.7, 1.0],
+        # var = 20*(lvl)
+        "apply_func": lambda img, lvl: gaussian_noise(img, mean=0, var=20*lvl)
+    },
+    {
+        "name": "salt_and_pepper",
+        "levels": [0.01, 0.03, 0.05, 0.07, 0.1],
+        "apply_func": lambda img, lvl: salt_and_pepper(img, amount=lvl)
+    },
+    {
+        "name": "perlin_noise",
+        "levels": [0.2, 0.4, 0.6, 0.8, 1.0],
+        # scale = 50*lvl
+        "apply_func": lambda img, lvl: perlin_noise(img, scale=int(50*lvl))
+    },
+    {
+        "name": "jpeg_artifacts",
+        "levels": [30, 50, 70, 90],  # interpretati come quality
+        "apply_func": lambda img, lvl: jpeg_artifacts(img, quality=int(lvl))
+    },
+    {
+        "name": "irregular_spacing",
+        "levels": [1.0],  # un solo livello
+        "apply_func": lambda img, lvl: irregular_spacing(img, max_shift=3)
+    },
+    {
+        "name": "char_overlap",
+        "levels": [1.0],
+        "apply_func": lambda img, lvl: character_overlap(img, overlap_prob=0.8)
+    },
+    {
+        "name": "small_decorations",
+        "levels": [1.0],
+        "apply_func": lambda img, lvl: small_decorations(img, color=(0,0,255), thickness=1, num_lines=3)
+    },
+    {
+        "name": "shape_modif",
+        "levels": [0.3, 0.5, 0.7, 1.0],
+        # intensità => 0.3..1.0
+        "apply_func": lambda img, lvl: shape_modification(img, intensity=lvl)
+    },
+    {
+        "name": "gaussian_blur",
+        "levels": [1.0],  # un solo livello
+        "apply_func": lambda img, lvl: gaussian_blur(img, ksize=5)
+    },
+    {
+        "name": "motion_blur",
+        "levels": [0.1, 0.3, 0.5, 0.7, 0.9, 1.0],
+        "apply_func": lambda img, lvl: motion_blur(img, kernel_size=int(3 + 12*lvl))
+    }
 ]
+
 
 ########################################################################
 # --- FUNZIONE PRINCIPALE --- #
@@ -179,85 +279,127 @@ def main():
     # 1) Carichiamo le mappe di ground truth
     all_gt = load_ground_truths()
 
-    # 2) Istanziamo l'OCR
+    # 2) Inizializziamo l'OCR
     alpr = ALPR()
 
-    # Variabili per statistiche globali
+    # Variabili globali per statistiche totali (tutte le cartelle, trasformazioni e livelli)
     global_total = 0
     global_correct = 0
     global_matched_chars = 0
     global_total_chars = 0
 
-    # Per ogni cartella (eu, eu2, eu3, ecc.)
+    # 3) Iteriamo su ogni cartella (eu, eu2, eu3, ...)
     for folder_name, gt_map in all_gt.items():
-        # Otteniamo la lista di immagini .jpg
+        if not os.path.isdir(folder_name):
+            continue
+
+        # Lista di immagini .jpg
         image_files = [f for f in os.listdir(folder_name) if f.lower().endswith(".jpg")]
         image_files.sort()
 
         print(f"\n=== PROCESSING FOLDER: {folder_name} ===")
 
-        # Per ogni trasformazione definita
-        for transf_name, transf_func in TRANSFORMATIONS:
-            # Creiamo la cartella di output (es: "output_{transf_name}")
-            output_dir = os.path.join(folder_name, f"output_{transf_name}")
-            os.makedirs(output_dir, exist_ok=True)
+        # 4) Per ogni trasformazione con livelli
+        for transf in TRANSFORMATIONS_WITH_LEVELS:
+            transf_name = transf["name"]
+            levels = transf["levels"]
+            apply_func = transf["apply_func"]
 
-            # Statistiche per questa trasformazione
-            t_tot = 0
-            t_correct = 0
-            t_matched = 0
-            t_chars = 0
+            # Creiamo una cartella di output (es: "output_wave") dentro la cartella "folder_name"
+            transf_output_dir = os.path.join(folder_name, f"output_{transf_name}")
+            os.makedirs(transf_output_dir, exist_ok=True)
 
-            for img_file in image_files:
-                true_plate = gt_map.get(img_file)
-                if not true_plate:
-                    # Se non abbiamo ground truth per questa immagine, saltiamo
-                    continue
+            # Statistiche su TUTTI i livelli di questa trasformazione
+            transf_tot = 0
+            transf_correct = 0
+            transf_matched = 0
+            transf_chars = 0
 
-                image_path = os.path.join(folder_name, img_file)
-                img = cv2.imread(image_path)
-                if img is None:
-                    continue
+            # 5) Cicliamo i livelli di aggressività
+            for lvl in levels:
+                # Es. lvl=0.3 => perc_int=30 => "level_30"
+                perc_int = int(lvl * 100)
+                level_folder_name = f"level_{perc_int}"
+                level_output_dir = os.path.join(transf_output_dir, level_folder_name)
+                os.makedirs(level_output_dir, exist_ok=True)
 
-                # Applichiamo la trasformazione
-                transformed_img = transf_func(img)
+                # Statistiche per questo specifico livello
+                level_tot = 0
+                level_correct = 0
+                level_matched = 0
+                level_chars = 0
 
-                # Salviamo l'immagine trasformata
-                out_filename = f"{os.path.splitext(img_file)[0]}_{transf_name}.jpg"
-                out_path = os.path.join(output_dir, out_filename)
-                cv2.imwrite(out_path, transformed_img)
+                # 6) Elaboriamo ogni immagine
+                for img_file in image_files:
+                    true_plate = gt_map.get(img_file)
+                    if not true_plate:
+                        continue
 
-                # Ora eseguiamo OCR sull'immagine trasformata
-                ocr_plate = run_ocr(alpr, out_path)
+                    image_path = os.path.join(folder_name, img_file)
+                    img = cv2.imread(image_path)
+                    if img is None:
+                        continue
 
-                # Confronto
-                t_tot += 1
-                if ocr_plate == true_plate:
-                    t_correct += 1
+                    # Applica la trasformazione con intensità lvl
+                    transformed_img = apply_func(img, lvl)
 
-                matched, total_chars = sequence_match_score(ocr_plate, true_plate)
-                t_matched += matched
-                t_chars += total_chars
+                    # Salva l'immagine modificata
+                    # Nome file: "<original>_<transfName>_<percInt>.jpg"
+                    out_filename = f"{os.path.splitext(img_file)[0]}_{transf_name}_{perc_int}.jpg"
+                    out_path = os.path.join(level_output_dir, out_filename)
+                    cv2.imwrite(out_path, transformed_img)
 
-            # Stampa statistiche per questa trasformazione
-            if t_tot > 0:
-                perc_correct = t_correct / t_tot * 100
-                perc_char_acc = t_matched / t_chars * 100
-                print(f"  >> {transf_name} | Immagini: {t_tot} | Perfette: {t_correct} ({perc_correct:.2f}%) | Chars: {perc_char_acc:.2f}%")
+                    # OCR
+                    ocr_plate = run_ocr(alpr, out_path)
+
+                    # Confronto
+                    level_tot += 1
+                    if ocr_plate == true_plate:
+                        level_correct += 1
+
+                    matched, tot_chars = sequence_match_score(ocr_plate, true_plate)
+                    level_matched += matched
+                    level_chars += tot_chars
+
+                # Fine loop immagini per un livello
+                transf_tot += level_tot
+                transf_correct += level_correct
+                transf_matched += level_matched
+                transf_chars += level_chars
+
+                # Aggiorniamo le globali
+                global_total += level_tot
+                global_correct += level_correct
+                global_matched_chars += level_matched
+                global_total_chars += level_chars
+
+                # Stampiamo i risultati di questo livello
+                if level_tot > 0:
+                    pct_correct = (level_correct / level_tot) * 100
+                    pct_chars = (level_matched / level_chars) * 100
+                    print(f"  [{transf_name}] lvl={perc_int}% | "
+                          f"Imgs: {level_tot} | Perfette: {level_correct} ({pct_correct:.2f}%) "
+                          f"| Chars: {pct_chars:.2f}%")
+                else:
+                    print(f"  [{transf_name}] lvl={perc_int}% | Nessuna immagine elaborata.")
+
+            # Fine loop su tutti i "levels" di questa trasformazione
+
+            # Statistiche totali per questa trasformazione (somma di tutti i livelli)
+            if transf_tot > 0:
+                total_pct_correct = (transf_correct / transf_tot) * 100
+                total_pct_chars = (transf_matched / transf_chars) * 100
+                print(f" => [{transf_name}] TOT (tutti i livelli) | "
+                      f"Imgs: {transf_tot} | Perfette: {transf_correct} ({total_pct_correct:.2f}%) "
+                      f"| Chars: {total_pct_chars:.2f}%")
             else:
-                print(f"  >> {transf_name} | Nessuna immagine processata.")
+                print(f" => [{transf_name}] Nessuna immagine processata in totale.")
 
-            # Aggiungiamo al globale
-            global_total += t_tot
-            global_correct += t_correct
-            global_matched_chars += t_matched
-            global_total_chars += t_chars
-
-    # 3) Statistiche globali finali
+    # 7) Statistiche globali finali su tutte le cartelle e trasformazioni
     print("\n=== RISULTATI FINALI SU TUTTE LE CARTELLE E TRASFORMAZIONI ===")
     if global_total > 0:
-        global_perc_correct = global_correct / global_total * 100
-        global_char_acc = global_matched_chars / global_total_chars * 100
+        global_perc_correct = (global_correct / global_total) * 100
+        global_char_acc = (global_matched_chars / global_total_chars) * 100
         print(f"Immagini totali elaborate: {global_total}")
         print(f"Targhe perfettamente corrette: {global_correct} ({global_perc_correct:.2f}%)")
         print(f"Accuratezza carattere per carattere: {global_char_acc:.2f}%")
